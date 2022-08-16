@@ -1,5 +1,20 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$uEBe/vvDOs5DNMVFjB93tuhHEh0JkUNEwip.ALtL1c71iKfSYb7hu",
+      "number": "0912345678",
+      "role": 1,
+      "id": 1
+    },
+    {
+      "email": "member@gmail.com",
+      "password": "$2a$10$MA/lh2QRIqBiJ7MzsrxJiuJcQs5zVxfJRc5OD75rcBeqU6Z.wBdEO",
+      "number": "012345678",
+      "role": 0,
+      "id": 2
+    }
+  ],
   "category": [
     {
       "id": 1,

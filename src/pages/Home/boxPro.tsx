@@ -12,11 +12,7 @@ import Image11 from "../../assets/images/care.png"
 import Image12 from "../../assets/images/airtag.png"
 import Image13 from "../../assets/images/gaming.png"
 import Image14 from "../../assets/images/chupanh.png"
-// import Image15 from "../../assets/images/Rectangle (19).png"
-// import Image16 from "../../assets/images/Rectangle (20).png"
-// import Image17 from "../../assets/images/Rectangle (21).png"
-// import Image18 from "../../assets/images/Rectangle (22).png"
-// import Image19 from "../../assets/images/Rectangle (23).png"
+
 import styled from 'styled-components';
 import { Content } from "antd/lib/layout/layout"
 import { Col, Divider, Row } from 'antd';
@@ -108,7 +104,7 @@ const BoxPro = () => {
                         <Img1 src={Image13} alt="" />
                     </Col>
                 </Row>
-                {/* <Row style={{ padding: '25px 100px', justifyContent: 'space-between' }}>
+                <Row style={{ padding: '25px 100px', justifyContent: 'space-between' }}>
                     <h2>LINH KIỆN MÁY TÍNH</h2>
                     <p style={{ paddingTop: '10px', paddingRight: '40px' }}>Xem tất cả</p>
                 </Row>
@@ -123,33 +119,33 @@ const BoxPro = () => {
                         <Name1>
                             <p>CPU</p>
                         </Name1>
-                        <Img1 src={Image15} alt="" />
+                        <Img1 src={Image13} alt="" />
                     </Col>
                     <Col span={3} style={{ backgroundColor: '#F9A8D4', borderRadius: '10px', marginLeft: '15px' }}>
                         <Name1>
                             <p>Mainboard</p>
                         </Name1>
-                        <Img1 src={Image16} alt="" />
+                        <Img1 src={Image12} alt="" />
                     </Col>
                     <Col span={3} style={{ backgroundColor: '#C4B5FD', borderRadius: '10px', marginLeft: '15px' }}>
                         <Name1>
                             <p>RAM</p>
                         </Name1>
-                        <Img1 src={Image17} alt="" />
+                        <Img1 src={Image11} alt="" />
                     </Col>
                     <Col span={3} style={{ backgroundColor: '#A5B4FC', borderRadius: '10px', marginLeft: '15px' }}>
                         <Name1>
                             <p>Ổ cứng</p>
                         </Name1>
-                        <Img1 src={Image18} alt="" />
+                        <Img1 src={Image10} alt="" />
                     </Col>
                     <Col span={3} style={{ backgroundColor: '#93C5FD', borderRadius: '10px', marginLeft: '15px' }}>
                         <Name1>
                             <p>Card màn hình</p>
                         </Name1>
-                        <Img1 src={Image19} alt="" />
+                        <Img1 src={Image9} alt="" />
                     </Col>
-                </Row> */}
+                </Row>
             </Content>
         </>
     )

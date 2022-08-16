@@ -40,7 +40,7 @@ const ProductPage = (props: Props) => {
         </Row>
         <Row>
           {data &&
-            data.map((item: any, index: any) => {
+            data.map((item: any) => {
               return (
                 <div>
                   <Col span={4} >
@@ -52,8 +52,8 @@ const ProductPage = (props: Props) => {
                           <h3>{item.name}</h3>
                         </Name>
                         <Price>
-                          <span style={style}>{item.originalPrice}đ</span>
-                          <span>{item.saleOffPrice}đ</span>
+                          <span style={style}>{item.saleOffPrice.toLocaleString()}đ</span>
+                          <span>{item.originalPrice.toLocaleString()}đ</span>
                         </Price>
                         <Text>
                           <p>{item.shortDesc}</p>

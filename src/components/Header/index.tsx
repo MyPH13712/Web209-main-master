@@ -7,7 +7,7 @@ import { LogoutOutlined, LoginOutlined } from '@ant-design/icons';
 import deliveryImage from "../../assets/images/delivery.svg"
 import vectorImage from "../../assets/images/vector.svg"
 import cartImage from "../../assets/images/cart.svg"
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 type Props = {};
 const Header = (props: Props) => {
     const a = JSON.parse(localStorage.getItem("user") as string);
@@ -51,23 +51,30 @@ const Header = (props: Props) => {
                     <Link className="text-white" to="/cart">Giỏ hàng</Link>
                 </Vitri>
                 <div>
-                    {a == null ? (
-                        <div>
-                            <a
-                                href="/signup"
-                            >
-                                <LoginOutlined />
+                    {a == null ? (<div>
+                        <div className="dropdown">
+                            <a className="dropdown-toggle text-sm text-white font-normal" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Tài khoản
                             </a>
+                            <ul className="dropdown-menu">
+                                <li><Link className="dropdown-item text-sm font-normal" to={`/signin`}>Đăng nhập</Link></li>
+                                <li><Link className="dropdown-item text-sm font-normal" to={`/signup`}>Đăng kí</Link></li>
+                            </ul>
                         </div>
-                    ) : (
-                        <div>
-                            <button
-                                onClick={(e) => handleClick(e, "clicked")}
-                            >
-                                <LogoutOutlined />
-                            </button>
+                    </div>) : (<div>
+                        <div className="dropdown">
+                            <a className="dropdown-toggle text-sm text-white font-normal" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Tài khoản
+                            </a>
+                            <ul className="dropdown-menu">
+                                <li>{a.user.role == 1 ? (<div className="py-1">
+                                    <NavLink to="/admin" tabIndex={1} className="dropdown-item text-sm font-normal" role="menuitem">DashBoard</NavLink>
+                                </div>) : (<div></div>)}</li>
+                                <li><button value="1" tabIndex={3} className="dropdown-item text-sm font-normal" role="menuitem" id="logout"
+                                    onClick={(e) => handleClick(e, "clicked")}>Đăng xuất</button></li>
+                            </ul>
                         </div>
-                    )}
+                    </div>)}
                 </div>
 
             </Container>

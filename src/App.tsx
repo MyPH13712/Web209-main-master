@@ -18,6 +18,7 @@ import CategoryAdminPage from './pages/Admin/Category'
 import ProductDetail from './pages/Home/productDetail'
 import SignupPage from './pages/Auth/signup'
 import CartPage from './pages/Cart'
+import PrivateRouter from './utils/PrivateRoute'
 
 
 function App() {
@@ -29,13 +30,13 @@ function App() {
         <Route path="/" element={<UserLayout />}>
           <Route index element={<HomePage />} />
           <Route path="/product/detail/:id" element={<ProductDetail />} />
-          <Route path="cart" element={<CartPage/>}/>
+          <Route path="cart" element={<CartPage />} />
         </Route>
 
         <Route path='/signin' element={<SigninPage />} />
         <Route path='/signup' element={<SignupPage />} />
 
-        <Route path='/admin' element={<AdminLayout />}>
+        <Route path='/admin' element={<PrivateRouter><AdminLayout /></PrivateRouter>}>
           <Route index element={<ProductAdminPage />} />
           <Route path='product/add' element={<ProductAdd />} />
           <Route path='product/edit/:id' element={<ProductEdit />} />

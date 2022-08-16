@@ -104,14 +104,6 @@ const CartPage = () => {
             Đặt hàng
           </a>
         </div>
-        <div className="mt-2">
-          <a
-            href="#"
-            className="flex items-center justify-center rounded-md border border-transparent bg-neutral-50 px-6 py-3 text-sm text-red-600 shadow-sm hover:bg-neutral-100"
-          >
-            Chọn thêm
-          </a>
-        </div>
       </div>
     </div>
   );

@@ -46,8 +46,8 @@ const ProductDetail = (props: Props) => {
 
         <div>
           <Price>
-            <OriginalPrice>{product.originalPrice} đ</OriginalPrice>
             <SaleOff>{product.saleOffPrice} đ</SaleOff>
+            <OriginalPrice>{product.originalPrice} đ</OriginalPrice>
           </Price>
           <div>
             {product.description}
@@ -146,12 +146,13 @@ const Price = styled.div`
   margin-bottom: 10px;
 `;
 const OriginalPrice = styled.div`
-  color: red;
-  font-size: 16px;
-`;
-const SaleOff = styled.div`
   font-size: 12px;
   margin-left: 10px;
+`;
+const SaleOff = styled.div`
+color: red;
+  font-size: 16px;
+  
 `;
 const Items2 = styled.div`
   display: flex;

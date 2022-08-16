@@ -71,6 +71,9 @@ const SigninPage: React.FC = () => {
                                 <Input.Password size="large" />
                             </Form.Item>
                             <Form.Item>
+								<a href="/signup">Bạn chưa có tài khoản</a>
+							</Form.Item>
+                            <Form.Item>
                             <Button type="primary" danger htmlType="submit" style={{ width: "400px", height: "40px" }} >
 									Đăng nhập
 								</Button>
